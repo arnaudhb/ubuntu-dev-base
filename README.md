@@ -21,4 +21,5 @@ Any application using X11 will be displayed on the X server host
 
 ### References:
 http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
+
 https://stackoverflow.com/questions/16296753/can-you-run-gui-apps-in-a-docker-container
