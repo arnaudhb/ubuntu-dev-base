@@ -1,19 +1,27 @@
 ## ubuntu-dev-base
 
-### Description
-Docker base image for development
 
-*  Installed packages : 
+### Description
+Docker base image for development.
+
+Installed packages : 
   * x11-apps
 
+
 ### Usage
-*  Run this image with the command : 
+Run this image with the command : 
+```sh
+	docker run -it --rm \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    arnaudhb/ubuntu-dev-base
+```
 
-    docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix arnaudhb/ubuntu-dev-base
 
-*  Ensure root user is allowed to connect to the X11 server of the host :
-    
+Ensure root user is allowed to connect to the X11 server of the host :
+ ```sh   
     xhost + si:localuser:root
+ ```
 
 ### X11
 Any application using X11 will be displayed on the X server host
